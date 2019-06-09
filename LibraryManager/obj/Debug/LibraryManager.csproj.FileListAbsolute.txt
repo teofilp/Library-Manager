@@ -1,0 +1,16 @@
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.csprojResolveAssemblyReference.cache
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.Properties.Resources.resources
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.csproj.GenerateResource.Cache
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.csproj.CoreCompileInputs.cache
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\bin\Debug\LibraryManager.exe.config
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\bin\Debug\LibraryManager.exe
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\bin\Debug\LibraryManager.pdb
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\bin\Debug\MySql.Data.dll
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\bin\Debug\Google.Protobuf.dll
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\bin\Debug\MySql.Data.xml
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.exe
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.pdb
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.Login.resources
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.AdminPanelForm.resources
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.BookForm.resources
