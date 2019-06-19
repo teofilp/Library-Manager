@@ -12,6 +12,7 @@ namespace LibraryManager
 {
     public partial class Login : Form
     {
+        public bool adminLogin = false;
         public bool loginSuccessful = false;
         public Login()
         {
@@ -42,6 +43,7 @@ namespace LibraryManager
             {
                 if (username == "admin" && password == "admin")
                 {
+                    adminLogin = true;
                     loginSuccessful = true;
                     this.Close();
                 }
@@ -50,10 +52,17 @@ namespace LibraryManager
                     MessageBox.Show("Admin credentials are wrong!");
             }
             else if (username.Length > 0 && password.Length > 0)
+            {
+                loginSuccessful = true;
                 MessageBox.Show("Hello guest!"); // redirect to guest panel
-            
+                this.Close();
+            }
 
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

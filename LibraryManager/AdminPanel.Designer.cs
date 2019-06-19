@@ -40,28 +40,38 @@
             this.bookEdit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bookDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.newBook = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.rentalsGridView = new System.Windows.Forms.DataGridView();
+            this.rentalId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.renterFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.renterEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.renterPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.renterAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.renterBorrowedBooks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.returned_books = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rentalDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editRentalBtn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.CompleteRental = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.categoryTb = new System.Windows.Forms.TextBox();
             this.categoriesGridView = new System.Windows.Forms.DataGridView();
-            this.addCategoryBtn = new System.Windows.Forms.Button();
             this.categoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cateogoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deleteCategoryBtn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.addCategoryBtn = new System.Windows.Forms.Button();
+            this.lateReturnsGrid = new System.Windows.Forms.DataGridView();
+            this.dueReturnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dueReturnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dueReturnBooks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LateDays = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notify = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lateReturns = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.booksGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentalsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lateReturnsGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // booksGridView
@@ -89,7 +99,7 @@
             this.booksGridView.Name = "booksGridView";
             this.booksGridView.ReadOnly = true;
             this.booksGridView.ShowEditingIcon = false;
-            this.booksGridView.Size = new System.Drawing.Size(916, 257);
+            this.booksGridView.Size = new System.Drawing.Size(1245, 257);
             this.booksGridView.TabIndex = 0;
             this.booksGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick_1);
             // 
@@ -170,7 +180,7 @@
             // newBook
             // 
             this.newBook.AccessibleName = "";
-            this.newBook.Location = new System.Drawing.Point(531, 12);
+            this.newBook.Location = new System.Drawing.Point(997, 12);
             this.newBook.Name = "newBook";
             this.newBook.Size = new System.Drawing.Size(127, 34);
             this.newBook.TabIndex = 1;
@@ -178,64 +188,97 @@
             this.newBook.UseVisualStyleBackColor = true;
             this.newBook.Click += new System.EventHandler(this.newBook_Click_1);
             // 
-            // dataGridView3
+            // rentalsGridView
             // 
-            this.dataGridView3.AccessibleName = "dataGridView2";
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AllowUserToOrderColumns = true;
-            this.dataGridView3.AllowUserToResizeColumns = false;
-            this.dataGridView3.AllowUserToResizeRows = false;
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewButtonColumn1,
-            this.dataGridViewButtonColumn2});
-            this.dataGridView3.Location = new System.Drawing.Point(310, 372);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(618, 235);
-            this.dataGridView3.TabIndex = 2;
+            this.rentalsGridView.AccessibleName = "dataGridView2";
+            this.rentalsGridView.AllowUserToAddRows = false;
+            this.rentalsGridView.AllowUserToDeleteRows = false;
+            this.rentalsGridView.AllowUserToOrderColumns = true;
+            this.rentalsGridView.AllowUserToResizeRows = false;
+            this.rentalsGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rentalsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rentalsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.rentalId,
+            this.renterFullName,
+            this.renterEmail,
+            this.renterPhoneNumber,
+            this.renterAddress,
+            this.renterBorrowedBooks,
+            this.returned_books,
+            this.rentalDate,
+            this.editRentalBtn,
+            this.CompleteRental});
+            this.rentalsGridView.Location = new System.Drawing.Point(310, 372);
+            this.rentalsGridView.Name = "rentalsGridView";
+            this.rentalsGridView.Size = new System.Drawing.Size(618, 235);
+            this.rentalsGridView.TabIndex = 2;
+            this.rentalsGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rentalsGridView_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn1
+            // rentalId
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.rentalId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rentalId.HeaderText = "Id";
+            this.rentalId.Name = "rentalId";
             // 
-            // dataGridViewTextBoxColumn2
+            // renterFullName
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Title";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.renterFullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.renterFullName.HeaderText = "Full Name";
+            this.renterFullName.Name = "renterFullName";
             // 
-            // dataGridViewTextBoxColumn3
+            // renterEmail
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Author";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.renterEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.renterEmail.HeaderText = "Email";
+            this.renterEmail.Name = "renterEmail";
             // 
-            // dataGridViewTextBoxColumn4
+            // renterPhoneNumber
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Copies";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.renterPhoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.renterPhoneNumber.HeaderText = "Phone Number";
+            this.renterPhoneNumber.Name = "renterPhoneNumber";
             // 
-            // dataGridViewButtonColumn1
+            // renterAddress
             // 
-            this.dataGridViewButtonColumn1.HeaderText = "Edit";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.Text = "Edit";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            this.renterAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.renterAddress.HeaderText = "Address";
+            this.renterAddress.Name = "renterAddress";
             // 
-            // dataGridViewButtonColumn2
+            // renterBorrowedBooks
             // 
-            this.dataGridViewButtonColumn2.HeaderText = "Delete";
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            this.dataGridViewButtonColumn2.Text = "Delete";
-            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
+            this.renterBorrowedBooks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.renterBorrowedBooks.HeaderText = "Borrowed Books";
+            this.renterBorrowedBooks.Name = "renterBorrowedBooks";
+            // 
+            // returned_books
+            // 
+            this.returned_books.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.returned_books.HeaderText = "Returned Books";
+            this.returned_books.Name = "returned_books";
+            // 
+            // rentalDate
+            // 
+            this.rentalDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rentalDate.HeaderText = "At Date";
+            this.rentalDate.Name = "rentalDate";
+            // 
+            // editRentalBtn
+            // 
+            this.editRentalBtn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.editRentalBtn.HeaderText = "Edit";
+            this.editRentalBtn.Name = "editRentalBtn";
+            this.editRentalBtn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editRentalBtn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.editRentalBtn.Text = "Edit";
+            this.editRentalBtn.UseColumnTextForButtonValue = true;
+            // 
+            // CompleteRental
+            // 
+            this.CompleteRental.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CompleteRental.HeaderText = "Complete";
+            this.CompleteRental.Name = "CompleteRental";
+            this.CompleteRental.Text = "Complete";
+            this.CompleteRental.UseColumnTextForButtonValue = true;
             // 
             // label1
             // 
@@ -260,52 +303,31 @@
             // button1
             // 
             this.button1.AccessibleName = "";
-            this.button1.Location = new System.Drawing.Point(664, 12);
+            this.button1.Location = new System.Drawing.Point(1130, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 34);
             this.button1.TabIndex = 5;
             this.button1.Text = "Reload Books";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.AccessibleName = "newBookBtn";
-            this.button2.Location = new System.Drawing.Point(797, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 34);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Delete All Books";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button1.Click += new System.EventHandler(this.reloadBooks);
             // 
             // button3
             // 
             this.button3.AccessibleName = "";
-            this.button3.Location = new System.Drawing.Point(640, 324);
+            this.button3.Location = new System.Drawing.Point(801, 329);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(127, 34);
             this.button3.TabIndex = 7;
             this.button3.Text = "Reload Rental Records";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.AccessibleName = "";
-            this.button4.Location = new System.Drawing.Point(773, 324);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(151, 34);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Delete All Rental Records";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.reloadRentals);
             // 
             // categoryTb
             // 
             this.categoryTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.categoryTb.Location = new System.Drawing.Point(16, 324);
-            this.categoryTb.Multiline = true;
+            this.categoryTb.Location = new System.Drawing.Point(12, 334);
             this.categoryTb.Name = "categoryTb";
-            this.categoryTb.Size = new System.Drawing.Size(151, 34);
+            this.categoryTb.Size = new System.Drawing.Size(151, 24);
             this.categoryTb.TabIndex = 9;
             // 
             // categoriesGridView
@@ -325,17 +347,6 @@
             this.categoriesGridView.Size = new System.Drawing.Size(279, 235);
             this.categoriesGridView.TabIndex = 10;
             this.categoriesGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.categoriesGridView_CellContentClick);
-            // 
-            // addCategoryBtn
-            // 
-            this.addCategoryBtn.AccessibleName = "";
-            this.addCategoryBtn.Location = new System.Drawing.Point(174, 324);
-            this.addCategoryBtn.Name = "addCategoryBtn";
-            this.addCategoryBtn.Size = new System.Drawing.Size(117, 34);
-            this.addCategoryBtn.TabIndex = 11;
-            this.addCategoryBtn.Text = "Add Category";
-            this.addCategoryBtn.UseVisualStyleBackColor = true;
-            this.addCategoryBtn.Click += new System.EventHandler(this.addCategoryBtn_Click);
             // 
             // categoryId
             // 
@@ -357,27 +368,101 @@
             this.deleteCategoryBtn.Text = "Delete";
             this.deleteCategoryBtn.UseColumnTextForButtonValue = true;
             // 
+            // addCategoryBtn
+            // 
+            this.addCategoryBtn.AccessibleName = "";
+            this.addCategoryBtn.Location = new System.Drawing.Point(174, 334);
+            this.addCategoryBtn.Name = "addCategoryBtn";
+            this.addCategoryBtn.Size = new System.Drawing.Size(117, 24);
+            this.addCategoryBtn.TabIndex = 11;
+            this.addCategoryBtn.Text = "Add Category";
+            this.addCategoryBtn.UseVisualStyleBackColor = true;
+            this.addCategoryBtn.Click += new System.EventHandler(this.addCategoryBtn_Click);
+            // 
+            // lateReturnsGrid
+            // 
+            this.lateReturnsGrid.AllowUserToAddRows = false;
+            this.lateReturnsGrid.AllowUserToResizeRows = false;
+            this.lateReturnsGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lateReturnsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lateReturnsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dueReturnId,
+            this.dueReturnName,
+            this.dueReturnBooks,
+            this.LateDays,
+            this.notify});
+            this.lateReturnsGrid.Location = new System.Drawing.Point(944, 372);
+            this.lateReturnsGrid.Name = "lateReturnsGrid";
+            this.lateReturnsGrid.Size = new System.Drawing.Size(313, 235);
+            this.lateReturnsGrid.TabIndex = 12;
+            this.lateReturnsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lateReturnsGrid_CellContentClick);
+            // 
+            // dueReturnId
+            // 
+            this.dueReturnId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dueReturnId.HeaderText = "Id";
+            this.dueReturnId.Name = "dueReturnId";
+            // 
+            // dueReturnName
+            // 
+            this.dueReturnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dueReturnName.HeaderText = "Name";
+            this.dueReturnName.Name = "dueReturnName";
+            // 
+            // dueReturnBooks
+            // 
+            this.dueReturnBooks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dueReturnBooks.HeaderText = "Books to be returned";
+            this.dueReturnBooks.Name = "dueReturnBooks";
+            // 
+            // LateDays
+            // 
+            this.LateDays.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LateDays.HeaderText = "Late Days";
+            this.LateDays.Name = "LateDays";
+            // 
+            // notify
+            // 
+            this.notify.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.notify.HeaderText = "Notify";
+            this.notify.Name = "notify";
+            this.notify.Text = "Notify";
+            this.notify.UseColumnTextForButtonValue = true;
+            // 
+            // lateReturns
+            // 
+            this.lateReturns.AutoSize = true;
+            this.lateReturns.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lateReturns.Location = new System.Drawing.Point(941, 340);
+            this.lateReturns.Name = "lateReturns";
+            this.lateReturns.Size = new System.Drawing.Size(92, 18);
+            this.lateReturns.TabIndex = 13;
+            this.lateReturns.Text = "Late Returns";
+            // 
             // AdminPanelForm
             // 
-            this.ClientSize = new System.Drawing.Size(940, 619);
+            this.ClientSize = new System.Drawing.Size(1269, 617);
+            this.Controls.Add(this.lateReturns);
+            this.Controls.Add(this.lateReturnsGrid);
             this.Controls.Add(this.booksGridView);
             this.Controls.Add(this.addCategoryBtn);
             this.Controls.Add(this.categoriesGridView);
             this.Controls.Add(this.categoryTb);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.rentalsGridView);
             this.Controls.Add(this.newBook);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "AdminPanelForm";
-            this.ShowIcon = false;
             this.Text = "Library Manager";
+            this.Load += new System.EventHandler(this.AdminPanelForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.booksGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentalsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lateReturnsGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,19 +488,11 @@
         private System.Windows.Forms.DataGridViewButtonColumn deleteRental;
         private System.Windows.Forms.DataGridView booksGridView;
         private System.Windows.Forms.Button newBook;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
+        private System.Windows.Forms.DataGridView rentalsGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookID;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookAuthor;
@@ -432,6 +509,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryId;
         private System.Windows.Forms.DataGridViewTextBoxColumn cateogoryName;
         private System.Windows.Forms.DataGridViewButtonColumn deleteCategoryBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rentalId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn renterFullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn renterEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn renterPhoneNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn renterAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn renterBorrowedBooks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn returned_books;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rentalDate;
+        private System.Windows.Forms.DataGridViewButtonColumn editRentalBtn;
+        private System.Windows.Forms.DataGridViewButtonColumn CompleteRental;
+        private System.Windows.Forms.DataGridView lateReturnsGrid;
+        private System.Windows.Forms.Label lateReturns;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dueReturnId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dueReturnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dueReturnBooks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LateDays;
+        private System.Windows.Forms.DataGridViewButtonColumn notify;
     }
 }
 

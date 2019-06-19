@@ -207,6 +207,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 511);
             this.Controls.Add(this.bookPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "BookForm";
             this.Text = "Add new book";
             this.Load += new System.EventHandler(this.BookForm_Load);

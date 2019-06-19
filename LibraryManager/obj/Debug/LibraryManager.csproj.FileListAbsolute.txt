@@ -1,4 +1,3 @@
-C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.csprojResolveAssemblyReference.cache
 C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.Properties.Resources.resources
 C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.csproj.GenerateResource.Cache
 C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.csproj.CoreCompileInputs.cache
@@ -14,3 +13,8 @@ C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\Library
 C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.Login.resources
 C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.AdminPanelForm.resources
 C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.BookForm.resources
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.booksCollection.resources
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.BookControlDb.resources
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.csprojResolveAssemblyReference.cache
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.BookControlSm.resources
+C:\Users\Tudor Filp\source\repos\LibraryManager\LibraryManager\obj\Debug\LibraryManager.RentalForm.resources

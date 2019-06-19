@@ -202,7 +202,7 @@ namespace LibraryManager
 
                 int newCopies = Int32.Parse(bookCopiesTb.Text);
 
-                if(newCopies > copies - available_copies) // handle new available copies. New Total > Old Total - availalbe_copies = Total Rented
+                if(newCopies >= copies - available_copies) // handle new available copies. New Total > Old Total - availalbe_copies = Total Rented
                 {
                     available_copies += newCopies - copies;
                     copies = newCopies;

@@ -22,12 +22,15 @@ namespace LibraryManager
 
             Login login = new Login();
 
-            //Application.Run(login);
+            Application.Run(login);
 
-
-             Application.Run(new AdminPanelForm());
-
-               
-        }
+            if (login.loginSuccessful)
+            {
+                if (login.adminLogin)
+                    Application.Run(new AdminPanelForm());
+                else
+                    Application.Run(new booksCollection());
+            }                
+    }
     }
 }
