@@ -55,11 +55,11 @@ namespace LibraryManager
                         reader.GetString(5), reader.GetString(6), reader.GetDateTime(7).ToShortDateString()};
 
                         rentalsGridView.Rows.Add(rentalRow);
-
+                        
                         // check to see whether there are books to be returned and have already passed 14 days from borrowing
                         int daysFromRental = getDaysFromNow(reader.GetDateTime(7));
                         Console.WriteLine(daysFromRental);
-                        List<String> toReturn = (booksToReturn(reader.GetString(5), reader.GetString(6)));
+                        List<String> toReturn = booksToReturn(reader.GetString(5), reader.GetString(6));
 
                         if (toReturn.Count > 0)
                         {
@@ -71,7 +71,8 @@ namespace LibraryManager
                                 notifyDetails[reader.GetString(0)] = "Phone Number: " + reader.GetString(3) + "\nEmail: " + reader.GetString(2);
 
                                 string[] lateReturnsRow = { reader.GetString(0), reader.GetString(1), booksToReturnString, lateDays.ToString() };
-                                lateReturnsGrid.Rows.Add(lateReturnsRow);
+                                lateReturnsGrid.Rows.Add(lateReturnsRow); 
+                                // afisam cartile care mai trebuiie returnate daca au trecut mai mult de 14 zile
 
                             }
                         }
@@ -104,6 +105,11 @@ namespace LibraryManager
                 if (!returnedBooks.Contains(borrowed))
                     toReturn.Add(borrowed);
             });
+            /* same as
+            for (int i = 0; i < borrowedBooks.Length; i++)
+                if (!returnedBooks.Contains(borrowedBooks[i]))
+                    toReturn.Add(borrowedBooks[i]);
+                    */
 
             return toReturn;
         }

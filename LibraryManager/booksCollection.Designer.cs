@@ -35,6 +35,7 @@
             this.searchTb = new System.Windows.Forms.TextBox();
             this.searchBtn = new System.Windows.Forms.Button();
             this.checkoutPnl = new System.Windows.Forms.Panel();
+            this.disclaimer = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.Label();
             this.addressTb = new System.Windows.Forms.TextBox();
             this.confirmBtn = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.renterLastNameTb = new System.Windows.Forms.TextBox();
             this.renterFirstNameTb = new System.Windows.Forms.TextBox();
             this.checkoutBackBtn = new System.Windows.Forms.Button();
-            this.disclaimer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.checkoutPnl.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +122,16 @@
             this.checkoutPnl.Size = new System.Drawing.Size(899, 487);
             this.checkoutPnl.TabIndex = 5;
             this.checkoutPnl.Visible = false;
+            // 
+            // disclaimer
+            // 
+            this.disclaimer.AutoSize = true;
+            this.disclaimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.disclaimer.Location = new System.Drawing.Point(262, 36);
+            this.disclaimer.Name = "disclaimer";
+            this.disclaimer.Size = new System.Drawing.Size(316, 20);
+            this.disclaimer.TabIndex = 7;
+            this.disclaimer.Text = "Books have to be returned within 14 days";
             // 
             // Address
             // 
@@ -223,16 +233,6 @@
             this.checkoutBackBtn.UseVisualStyleBackColor = true;
             this.checkoutBackBtn.Click += new System.EventHandler(this.checkoutBackBtn_Click);
             // 
-            // disclaimer
-            // 
-            this.disclaimer.AutoSize = true;
-            this.disclaimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.disclaimer.Location = new System.Drawing.Point(262, 36);
-            this.disclaimer.Name = "disclaimer";
-            this.disclaimer.Size = new System.Drawing.Size(316, 20);
-            this.disclaimer.TabIndex = 7;
-            this.disclaimer.Text = "Books have to be returned within 14 days";
-            // 
             // booksCollection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,6 +245,8 @@
             this.Controls.Add(this.checkoutBtn);
             this.Controls.Add(this.cartItemsNumber);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "booksCollection";
             this.Text = "Gallery";
             this.Load += new System.EventHandler(this.booksCollection_Load);

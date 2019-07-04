@@ -95,6 +95,7 @@
             // 
             this.bookTitle.AutoSize = true;
             this.bookTitle.Location = new System.Drawing.Point(312, 22);
+            this.bookTitle.MaximumSize = new System.Drawing.Size(100, 0);
             this.bookTitle.Name = "bookTitle";
             this.bookTitle.Size = new System.Drawing.Size(27, 13);
             this.bookTitle.TabIndex = 5;
@@ -104,6 +105,7 @@
             // 
             this.bookAuthor.AutoSize = true;
             this.bookAuthor.Location = new System.Drawing.Point(312, 50);
+            this.bookAuthor.MaximumSize = new System.Drawing.Size(100, 0);
             this.bookAuthor.Name = "bookAuthor";
             this.bookAuthor.Size = new System.Drawing.Size(27, 13);
             this.bookAuthor.TabIndex = 6;

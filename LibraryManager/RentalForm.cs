@@ -128,6 +128,7 @@ namespace LibraryManager
                     MessageBox.Show("Info updated successfully");
                     updateBooksAvailableCopies();
                     adminPanel.getRentals();
+                    adminPanel.getBooks();
                     this.Close();
                 } else
                 {

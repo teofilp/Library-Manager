@@ -46,7 +46,6 @@
             this.loginLabel.Size = new System.Drawing.Size(76, 25);
             this.loginLabel.TabIndex = 0;
             this.loginLabel.Text = "LOGIN";
-            this.loginLabel.Click += new System.EventHandler(this.loginLabel_Click);
             // 
             // usernameTextBox
             // 
@@ -63,7 +62,6 @@
             this.passwordTextBox.Size = new System.Drawing.Size(313, 20);
             this.passwordTextBox.TabIndex = 2;
             this.passwordTextBox.UseSystemPasswordChar = true;
-            this.passwordTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // loginButton
             // 
@@ -83,7 +81,6 @@
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Username";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -116,6 +113,8 @@
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.loginLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);

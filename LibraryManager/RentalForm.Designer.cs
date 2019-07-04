@@ -177,6 +177,7 @@
             this.Controls.Add(this.borrowerPhoneNumber);
             this.Controls.Add(this.borrowerEmail);
             this.Controls.Add(this.borrowerName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RentalForm";
             this.Text = "RentalForm";
             this.Load += new System.EventHandler(this.RentalForm_Load);
